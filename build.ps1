@@ -16,15 +16,18 @@ Function buildFont($eng, $kor, $out) {
     rm temp.ttf
 }
 
-#rm *.bdf
-#rm *.sfd
-#rm *.ttf
-#rm *.otf
-#rm *.woff
-#rm *.woff2
+rm *.bdf
+rm *.sfd
+rm *.ttf
+rm *.otf
+rm *.woff
+rm *.woff2
 
-#buildFont "src/eng.fnt" "src/dkby.fnt" "Dkby_8x4x4"
-buildFont "src/eng.fnt" "src/hanme.fnt" "Hanme_8x4x4"
-#buildFont "src/eng.fnt" "src/iyagi.fnt" "Iyagi_8x4x4"
-#buildFont "src/eng.fnt" "src/serif.fnt" "Serif_8x4x4"
-#buildFont "src/eng.fnt" "src/sans.fnt" "Sans_8x4x4"
+buildFont "src/eng.fnt" "src/dkby.fnt" "Dkby_8x4x4"
+buildFont "src/eng_sans.fnt" "src/dkby.fnt" "Dkby_8x4x4_sans"
+buildFont "src/eng.fnt" "src/hanme.fnt" "Hanme_8x4x4_sans"
+buildFont "src/eng_sans.fnt" "src/hanme.fnt" "Hanme_8x4x4_sans"
+buildFont "src/eng.fnt" "src/iyagi.fnt" "Iyagi_8x4x4"
+buildFont "src/eng_sans.fnt" "src/iyagi.fnt" "Iyagi_8x4x4_sans"
+buildFont "src/eng.fnt" "src/serif.fnt" "Serif_8x4x4"
+buildFont "src/eng_sans.fnt" "src/sans.fnt" "Sans_8x4x4"
