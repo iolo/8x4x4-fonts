@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
+// https://susam.net/code/cp437/cp437.html
+const CP437_TO_UNICODE = require('./cp437_to_unicode.json');
 
-function generateGlyphs({ fileName, glyphWidth, glyphHeight, glyphCount, codeBegin = 0 }) {
+function generateGlyphs({ fileName, glyphWidth, glyphHeight, glyphCount, codeMapper }) {
   const result = [];
   const glyphData = fs.readFileSync(fileName);
   const glyphAscent = glyphHeight;
@@ -9,7 +11,7 @@ function generateGlyphs({ fileName, glyphWidth, glyphHeight, glyphCount, codeBeg
   const glyphWidthBytes = glyphWidth / 8;
   const bytesPerGlyph = glyphWidthBytes * glyphHeight;
   for (let i = 0, offset = 0; i < glyphCount; i++) {
-    const code = codeBegin + i;
+    const code = codeMapper ? codeMapper(i) : i;
     result.push(`STARTCHAR U+${code.toString(16).toUpperCase().padStart(4, `0`)}`);
     result.push(`ENCODING ${code}`);
     result.push(`SWIDTH ${glyphWidth * 1000} 0`);
@@ -60,7 +62,7 @@ fs.writeFileSync(bdfFile, generateFont({
   fontWidth: 8,
   fontHeight: 16,
   glyphs: [
-    { fileName: engFontFile, glyphWidth: 8, glyphHeight: 16, glyphCount: 256, codeBegin: 0 },
-    { fileName: hanFontFile, glyphWidth: 16, glyphHeight: 16, glyphCount: 360, codeBegin: 0xe010 }, // (cho 19+1)*8 + (jung 21+1)*4 + (jong 27+1)*4; +1 for filler; 0xE010=PUA+
+    { fileName: engFontFile, glyphWidth: 8, glyphHeight: 16, glyphCount: 256, codeMapper: (index)=>CP437_TO_UNICODE[index].charCodeAt(0) },
+    { fileName: hanFontFile, glyphWidth: 16, glyphHeight: 16, glyphCount: 360, codeMapper: (index)=>(index + 0xe010) }, // (cho 19+1)*8 + (jung 21+1)*4 + (jong 27+1)*4; +1 for filler; 0xE010=PUA+
   ],
 }));

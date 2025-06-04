@@ -25,7 +25,7 @@ rm *.woff2
 
 buildFont "src/eng.fnt" "src/dkby.fnt" "Dkby_8x4x4"
 buildFont "src/eng_sans.fnt" "src/dkby.fnt" "Dkby_8x4x4_sans"
-buildFont "src/eng.fnt" "src/hanme.fnt" "Hanme_8x4x4_sans"
+buildFont "src/eng.fnt" "src/hanme.fnt" "Hanme_8x4x4"
 buildFont "src/eng_sans.fnt" "src/hanme.fnt" "Hanme_8x4x4_sans"
 buildFont "src/eng.fnt" "src/iyagi.fnt" "Iyagi_8x4x4"
 buildFont "src/eng_sans.fnt" "src/iyagi.fnt" "Iyagi_8x4x4_sans"
