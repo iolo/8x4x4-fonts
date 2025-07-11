@@ -17,8 +17,10 @@ For more information see:
 ## Version
 This archive is created from
 
-        commit 603a271fa515d8ad23dc3be4ad835b846ccf0422
-        Author: Finii <Finii@users.noreply.github.com>
-        Date:   Mon Nov 18 12:20:37 2024 +0000
+        commit dc4e3309d6c1483532ccaefafd1e940d7c80dec1
+        Author: Fini Jastrow <ulf.fini.jastrow@desy.de>
+        Date:   Thu Apr 24 20:21:16 2025 +0200
         
-            [ci] Rebuild original-source font
+            CI: Prepare for update casks workflow run [skip ci]
+            
+            Signed-off-by: Fini Jastrow <ulf.fini.jastrow@desy.de>
