@@ -22,8 +22,11 @@ JAMO_JONG = 0x11a8
 
 # 가~힣
 KOR = 0xac00
-# PUA 영역에 조합용 한글 초성/중성/종성 글립이 들어있음
-PUA = 0xe010
+# PUA(0xe000~0xf8ff) 영역에 조합용 한글 초성/중성/종성 글립이 들어있음
+#PUA = 0xe010
+# conflict with nerd font glyphs
+# https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points
+PUA = 0xf600
 
 PUA_CHO = PUA # 초성 글립(3종류)
 PUA_JUNG = PUA_CHO + (NUM_CHO + 1) * CHO_KIND # 중성 글립(1종류)

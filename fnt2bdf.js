@@ -2,6 +2,10 @@ const fs = require('fs');
 const path = require('path');
 // https://susam.net/code/cp437/cp437.html
 const CP437_TO_UNICODE = require('./cp437_to_unicode.json');
+// conflict with nerd font glyphs
+// https://github.com/ryanoasis/nerd-fonts/wiki/Glyph-Sets-and-Code-Points
+//const PUA = 0xe010; 
+const PUA = 0xf600;
 
 function generateGlyphs({ fileName, glyphWidth, glyphHeight, glyphCount, codeMapper }) {
   const result = [];
@@ -18,7 +22,7 @@ function generateGlyphs({ fileName, glyphWidth, glyphHeight, glyphCount, codeMap
     result.push(`DWIDTH ${glyphWidth} 0`);
     result.push(`BBX ${glyphWidth} ${glyphHeight} ${-glyphDescent}`);
     result.push(`BITMAP`);
-    for (let y = 0, n = offset; y < glyphHeight; y++) {
+    for (let y = 0; y < glyphHeight; y++) {
       const hex = [];
       for (let x = 0; x < glyphWidthBytes; x++) {
         hex.push(glyphData[offset++].toString(16).toUpperCase().padStart(2, '0'));
@@ -63,6 +67,6 @@ fs.writeFileSync(bdfFile, generateFont({
   fontHeight: 16,
   glyphs: [
     { fileName: engFontFile, glyphWidth: 8, glyphHeight: 16, glyphCount: 256, codeMapper: (index)=>CP437_TO_UNICODE[index].charCodeAt(0) },
-    { fileName: hanFontFile, glyphWidth: 16, glyphHeight: 16, glyphCount: 360, codeMapper: (index)=>(index + 0xe010) }, // (cho 19+1)*8 + (jung 21+1)*4 + (jong 27+1)*4; +1 for filler; 0xE010=PUA+
+    { fileName: hanFontFile, glyphWidth: 16, glyphHeight: 16, glyphCount: 360, codeMapper: (index)=>(PUA + index) }, // (cho 19+1)*8 + (jung 21+1)*4 + (jong 27+1)*4; +1 for filler; 0xE010=PUA+
   ],
 }));

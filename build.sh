@@ -13,7 +13,7 @@ function buildFont {
     exec_bitsnpicas convertbitmap -f ttf -o temp.ttf "$3.bdf"
     exec_fontforge --script generate_hangul_syllables.py "$3"
     if [ -x "./FontPatcher/font-patcher" ]; then
-      exec_fontforge --lang=py --script ./FontPatcher/font-patcher --powerline "$3.ttf"
+      exec_fontforge --lang=py --script ./FontPatcher/font-patcher --complete "$3.ttf"
     fi
     rm temp.ttf
 }
