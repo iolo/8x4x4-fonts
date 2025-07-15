@@ -9,6 +9,7 @@ function exec_bitsnpicas {
 }
 
 function buildFont {
+    rm $3.bdf $3.sfd $3.ttf $3.otf $3.woff $3.woff2
     node fnt2bdf.js "$1" "$2" "$3.bdf"
     exec_bitsnpicas convertbitmap -f ttf -o temp.ttf "$3.bdf"
     exec_fontforge --script generate_hangul_syllables.py "$3"
@@ -17,13 +18,6 @@ function buildFont {
     fi
     rm temp.ttf
 }
-
-rm *.bdf
-rm *.sfd
-rm *.ttf
-rm *.otf
-rm *.woff
-rm *.woff2
 
 buildFont "src/eng.fnt" "src/dkby.fnt" "Dkby_8x4x4"
 buildFont "src/eng_sans.fnt" "src/dkby.fnt" "Dkby_8x4x4_sans"
