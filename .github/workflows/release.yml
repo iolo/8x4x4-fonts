@@ -1,0 +1,29 @@
+name: Release Fonts
+
+on:
+  release:
+    types: [created]
+
+jobs:
+  attach-fonts:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Create fonts zip archive
+      run: |
+        cd fonts
+        zip -r ../8x4x4-fonts-all.zip .
+        cd ..
+        
+    - name: Upload fonts to release
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ github.event.release.upload_url }}
+        asset_path: ./8x4x4-fonts-all.zip
+        asset_name: 8x4x4-fonts-all.zip
+        asset_content_type: application/zip
