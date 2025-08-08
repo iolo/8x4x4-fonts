@@ -29,15 +29,21 @@
 
 ## 글꼴
 
-![한메한글](hanme-sample.png)
+![한메](hanme.png)
+![한메 sans](hanmesans.png)
+![한메 thin](hanmethin.png)
 
-![이야기](iyagi-sample.png)
+![이야기](iyagi.png)
+![이야기 sans](iyagisans.png)
 
-![도깨비](dkby-sample.png)
+![도깨비](dkby.png)
+![도깨비 sans](dkbysans.png)
 
-![고딕](sans-sample.png)
+![고딕](sans.png)
 
-![명조](serif-sample.png)
+![명조](serif.png)
+
+![샘물](saemmul.png)
 
 ## 참고
 
