@@ -19,11 +19,22 @@ function buildFont {
     rm temp.ttf
 }
 
-buildFont "eng.fnt" "dkby.fnt" "Dkby_8x4x4"
-buildFont "eng_sans.fnt" "dkby.fnt" "Dkby_8x4x4_sans"
-buildFont "eng.fnt" "hanme.fnt" "Hanme_8x4x4"
-buildFont "eng_sans.fnt" "hanme.fnt" "Hanme_8x4x4_sans"
-buildFont "eng.fnt" "iyagi.fnt" "Iyagi_8x4x4"
-buildFont "eng_sans.fnt" "iyagi.fnt" "Iyagi_8x4x4_sans"
-buildFont "eng.fnt" "serif.fnt" "Serif_8x4x4"
-buildFont "eng_sans.fnt" "sans.fnt" "Sans_8x4x4"
+#ENG_SERIF = "eng.fnt"
+#ENG_SANS = "eng_sans.fnt"
+ENG_SERIF="HMSTD1.ENG"
+#ENG_SANS="HMDEF.ENG"
+ENG_SANS="SEMIROM.ENG"
+
+buildFont $ENG_SERIF "dkby.fnt" "Dkby_8x4x4"
+buildFont $ENG_SANS "dkby.fnt" "Dkby_8x4x4_sans"
+buildFont $ENG_SERIF "hanme.fnt" "Hanme_8x4x4"
+buildFont $ENG_SANS "hanme.fnt" "Hanme_8x4x4_sans"
+buildFont $ENG_SERIF "iyagi.fnt" "Iyagi_8x4x4"
+buildFont $ENG_SANS "iyagi.fnt" "Iyagi_8x4x4_sans"
+buildFont $ENG_SERIF "serif.fnt" "Serif_8x4x4"
+buildFont $ENG_SANS "sans.fnt" "Sans_8x4x4"
+
+buildFont $ENG_SERIF "HMSAM.KOR" "Saemmul_8x4x4"
+buildFont $ENG_SANS "HMSAM.KOR" "Saemmul_8x4x4"
+
+buildFont "HMMCR.ENG" "HMSYSTH.KOR" "HanmeThin_8x4x4"

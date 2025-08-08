@@ -55,11 +55,11 @@ def generate_glyphs(file_name, glyph_width, glyph_height, glyph_count, code_mapp
         result.append(f"BBX {glyph_width} {glyph_height} 0 {-glyph_descent}")
         result.append("BITMAP")
         
-        # Row first processing
-        for x in range(glyph_width_bytes):
+        for y in range(glyph_height):
             hex_bytes = []
-            for y in range(glyph_height):
-                byte = glyph_data[(offset + y) + (x * glyph_height)]
+            for x in range(glyph_width_bytes):
+                # Row first processing
+                byte = glyph_data[offset + y * glyph_width_bytes + x]
                 hex_bytes.append(f"{byte:02X}")
             result.append(''.join(hex_bytes))
         
@@ -109,7 +109,7 @@ def main():
     # Parse command line arguments
     eng_font_file = sys.argv[1] if len(sys.argv) > 1 else 'eng.fnt'
     han_font_file = sys.argv[2] if len(sys.argv) > 2 else 'han.fnt'
-    bdf_file = sys.argv[3] if len(sys.argv) > 3 else '6x2x1.bdf'
+    bdf_file = sys.argv[3] if len(sys.argv) > 3 else '8x4x4.bdf'
     font_name = sys.argv[4] if len(sys.argv) > 4 else Path(bdf_file).stem
     
     # Load CP437 mapping
@@ -120,7 +120,7 @@ def main():
     
     # Code mappers
     def eng_code_mapper(index):
-        return ord(cp437_to_unicode[(index + 16) % 128])
+        return ord(cp437_to_unicode[index])
     
     def han_code_mapper(index):
         return PUA + index
@@ -135,14 +135,14 @@ def main():
                 'file_name': eng_font_file,
                 'glyph_width': 8,
                 'glyph_height': 16,
-                'glyph_count': 128,
+                'glyph_count': 256,
                 'code_mapper': eng_code_mapper
             },
             {
                 'file_name': han_font_file,
                 'glyph_width': 16,
                 'glyph_height': 16,
-                'glyph_count': 184,
+                'glyph_count': 360, # 8*(19+1) + 4*(21+1) + 4*(27+1)
                 'code_mapper': han_code_mapper
             }
         ]
