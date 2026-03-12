@@ -32,22 +32,23 @@
 
 ## 글꼴
 
-- [Hanme](https://iolo.kr/8x4x4-fonts/?font=Hanme_8x4x4)
-- [Hanme sans](https://iolo.kr/8x4x4-fonts/?font=Hanme_8x4x4_sans)
-- [Iyagi](https://iolo.kr/8x4x4-fonts/?font=Iyagi_8x4x4)
-- [Iyagi sans](https://iolo.kr/8x4x4-fonts/?font=Iyagi_8x4x4_sans)
-- [Dkby](https://iolo.kr/8x4x4-fonts/?font=Dkby_8x4x4)
-- [Dkby sans](https://iolo.kr/8x4x4-fonts/?font=Dkby_8x4x4_sans)
-- [Sans](https://iolo.kr/8x4x4-fonts/?font=Sans_8x4x4)
-- [Serif](https://iolo.kr/8x4x4-fonts/?font=Serif_8x4x4)
-- [Sam](https://iolo.kr/8x4x4-fonts/?font=Sam_8x4x4)
-- [Pilgi](https://iolo.kr/8x4x4-fonts/?font=Pilgi_8x4x4)
-- [Thin](https://iolo.kr/8x4x4-fonts/?font=Thin_8x4x4)
+- [Hanme](https://iolo.kr/8x4x4-fonts/?font=Hanme_8x4x4) - 한메 + ASCII serif
+- [Hanme sans](https://iolo.kr/8x4x4-fonts/?font=Hanme_8x4x4_sans) - 한메 + ASCII sans
+- [Iyagi](https://iolo.kr/8x4x4-fonts/?font=Iyagi_8x4x4) - 이야기 + ASCII serif
+- [Iyagi sans](https://iolo.kr/8x4x4-fonts/?font=Iyagi_8x4x4_sans) - 이야기 + ASCII sans
+- [Dkby](https://iolo.kr/8x4x4-fonts/?font=Dkby_8x4x4) - 도깨비 + ASCII serif
+- [Dkby sans](https://iolo.kr/8x4x4-fonts/?font=Dkby_8x4x4_sans) - 도깨비 + ASCII sans
+- [Sans](https://iolo.kr/8x4x4-fonts/?font=Sans_8x4x4) - 고딕(돋움;민부리) + ASCII sans
+- [Serif](https://iolo.kr/8x4x4-fonts/?font=Serif_8x4x4) - 명조(바탕;부리) + ASCII serif
+- [Sam](https://iolo.kr/8x4x4-fonts/?font=Sam_8x4x4) - 샘체 + ASCII sans
+- [Pilgi](https://iolo.kr/8x4x4-fonts/?font=Pilgi_8x4x4) - 필기체 + ASCII serif
+- [Thin](https://iolo.kr/8x4x4-fonts/?font=Thin_8x4x4) - 가는체 + ASCII thin serif
 
 ## 참고
 
 - [6x2x1-fonts](https://github.com/iolo/6x2x1-fonts)
 - [7x12-fonts](https://github.com/iolo/7x12-fonts)
+- [fed](https://github.com/iolo/fed)
 
 ---
 May the **SOURCE** be with you...
