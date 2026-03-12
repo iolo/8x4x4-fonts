@@ -38,19 +38,19 @@ cho_kind_with_jong    = [5, 5, 5, 5, 5, 5, 5, 5, 6, 7, 7, 7, 6, 6, 7, 7, 7, 6, 6
 jong_kind_by_jung     = [0, 2, 0, 2, 1, 2, 1, 2, 3, 0, 2, 1, 3, 3, 1, 2, 1, 3, 3, 1, 1];
 
 code = JAMO_CHO
-for cho in range(NUM_CHO):
+for cho in range(1,NUM_CHO):
     c = f.createChar(code)
     c.addReference(fontforge.nameFromUnicode(PUA_CHO + cho))
     code += 1
 
 code = JAMO_JUNG
-for jung in range(NUM_JUNG):
+for jung in range(1,NUM_JUNG):
     c = f.createChar(code)
     c.addReference(fontforge.nameFromUnicode(PUA_JUNG + jung))
     code += 1
 
 code = JAMO_JONG
-for jong in range(NUM_JONG):
+for jong in range(1,NUM_JONG-1):
     c = f.createChar(code)
     c.addReference(fontforge.nameFromUnicode(PUA_JONG + jong))
     code += 1
