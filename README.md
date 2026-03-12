@@ -10,42 +10,39 @@
 
 ## 조합 규칙
 
-- 초성1: 세로모음, 종성없음
-- 초성2: 가로모음ㅗㅛㅡ 종성없음
-- 초성3: 가로모음ㅜㅠ 종성없음
-- 초성4: 복모음ㅘㅙㅚㅢ 종성없음
-- 초성5: 복모음ㅝㅞㅟ 종성있음
-- 초성6: 세로모음 종성있음
-- 초성7: 가로모음 종성있음
-- 초성8: 복모음 종성있음
-- 중성1: 초성ㄱㅋ 종성없음
-- 중성2: 초성나머지ㅍ 종성없음
-- 중성3: 초성ㄱㅋ 종성있음
-- 중성4: 초성나머지 종성있음
-- 종성1: 모음ㅏㅑㅘ
-- 종성2: 모음ㅓㅕㅚㅝㅟㅢㅣ
-- 종성3: 모음ㅐㅒㅔㅖㅙㅞ
-- 종성4: 모음ㅗㅛㅜㅠㅡ
+- 초성 8벌
+  - 초성1: 세로모음, 종성없음
+  - 초성2: 가로모음ㅗㅛㅡ 종성없음
+  - 초성3: 가로모음ㅜㅠ 종성없음
+  - 초성4: 복모음ㅘㅙㅚㅢ 종성없음
+  - 초성5: 복모음ㅝㅞㅟ 종성있음
+  - 초성6: 세로모음 종성있음
+  - 초성7: 가로모음 종성있음
+  - 초성8: 복모음 종성있음
+- 중성 4벌
+  - 중성1: 초성ㄱㅋ 종성없음
+  - 중성2: 초성나머지ㅍ 종성없음
+  - 중성3: 초성ㄱㅋ 종성있음
+  - 중성4: 초성나머지 종성있음
+- 종성 4벌
+  - 종성1: 모음ㅏㅑㅘ
+  - 종성2: 모음ㅓㅕㅚㅝㅟㅢㅣ
+  - 종성3: 모음ㅐㅒㅔㅖㅙㅞ
+  - 종성4: 모음ㅗㅛㅜㅠㅡ
 
 ## 글꼴
 
-![한메](hanme.png)
-![한메 sans](hanmesans.png)
-![한메 thin](hanmethin.png)
-
-![이야기](iyagi.png)
-![이야기 sans](iyagisans.png)
-
-![도깨비](dkby.png)
-![도깨비 sans](dkbysans.png)
-
-![고딕](sans.png)
-
-![명조](serif.png)
-
-![샘물](saemmul.png)
-
-![필기](pilgi.png)
+- [Hanme](https://iolo.kr/8x4x4-fonts/?font=Hanme_8x4x4)
+- [Hanme sans](https://iolo.kr/8x4x4-fonts/?font=Hanme_8x4x4_sans)
+- [Iyagi](https://iolo.kr/8x4x4-fonts/?font=Iyagi_8x4x4)
+- [Iyagi sans](https://iolo.kr/8x4x4-fonts/?font=Iyagi_8x4x4_sans)
+- [Dkby](https://iolo.kr/8x4x4-fonts/?font=Dkby_8x4x4)
+- [Dkby sans](https://iolo.kr/8x4x4-fonts/?font=Dkby_8x4x4_sans)
+- [Sans](https://iolo.kr/8x4x4-fonts/?font=Sans_8x4x4)
+- [Serif](https://iolo.kr/8x4x4-fonts/?font=Serif_8x4x4)
+- [Sam](https://iolo.kr/8x4x4-fonts/?font=Sam_8x4x4)
+- [Pilgi](https://iolo.kr/8x4x4-fonts/?font=Pilgi_8x4x4)
+- [Thin](https://iolo.kr/8x4x4-fonts/?font=Thin_8x4x4)
 
 ## 참고
 
