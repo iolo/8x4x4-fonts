@@ -19,23 +19,14 @@ function buildFont {
     rm temp.ttf
 }
 
-#ENG_SERIF = "eng.fnt"
-#ENG_SANS = "eng_sans.fnt"
-ENG_SERIF="HMSTD1.ENG"
-#ENG_SANS="HMDEF.ENG"
-ENG_SANS="SEMIROM.ENG"
-
-buildFont $ENG_SERIF "dkby.fnt" "Dkby_8x4x4"
-buildFont $ENG_SANS "dkby.fnt" "Dkby_8x4x4_sans"
-buildFont $ENG_SERIF "hanme.fnt" "Hanme_8x4x4"
-buildFont $ENG_SANS "hanme.fnt" "Hanme_8x4x4_sans"
-buildFont $ENG_SERIF "iyagi.fnt" "Iyagi_8x4x4"
-buildFont $ENG_SANS "iyagi.fnt" "Iyagi_8x4x4_sans"
-buildFont $ENG_SERIF "serif.fnt" "Serif_8x4x4"
-buildFont $ENG_SANS "sans.fnt" "Sans_8x4x4"
-
-buildFont $ENG_SERIF "HMSAM.KOR" "Saemmul_8x4x4"
-buildFont $ENG_SANS "HMSAM.KOR" "Saemmul_8x4x4"
-buildFont $ENG_SERIF "HANPL2.KOR" "Pilgi_8x4x4"
-
-buildFont "HMMCR.ENG" "HMSYSTH.KOR" "HanmeThin_8x4x4"
+buildFont "asc_serif.fnt" "han_hanme.fnt" "Hanme_8x4x4"
+buildFont "asc_sans.fnt" "han_hanme.fnt" "Hanme_8x4x4_sans"
+buildFont "asc_serif.fnt" "han_dkby.fnt" "Dkby_8x4x4"
+buildFont "asc_sans.fnt" "han_dkby.fnt" "Dkby_8x4x4_sans"
+buildFont "asc_serif.fnt" "han_iyagi.fnt" "Iyagi_8x4x4"
+buildFont "asc_sans.fnt" "han_iyagi.fnt" "Iyagi_8x4x4_sans"
+buildFont "asc_sans.fnt" "han_sans.fnt" "Sans_8x4x4"
+buildFont "asc_serif.fnt" "han_serif.fnt" "Serif_8x4x4"
+buildFont "asc_sans.fnt" "han_pilgi.fnt" "Pilgi_8x4x4"
+buildFont "asc_sans.fnt" "han_sam.fnt" "Sam_8x4x4"
+buildFont "asc_thin.fnt" "han_thin.fnt" "Thin_8x4x4"
