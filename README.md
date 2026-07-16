@@ -43,6 +43,7 @@
 - [Sam](https://iolo.kr/8x4x4-fonts/?font=Sam_8x4x4) - 샘체 + ASCII sans
 - [Pilgi](https://iolo.kr/8x4x4-fonts/?font=Pilgi_8x4x4) - 필기체 + ASCII serif
 - [Thin](https://iolo.kr/8x4x4-fonts/?font=Thin_8x4x4) - 가는체 + ASCII thin serif
+- [U4K](https://iolo.kr/8x4x4-fonts/?font=U4K_8x4x4) - Ultima4K
 
 ## 참고
 

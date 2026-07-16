@@ -93,6 +93,14 @@
           url('./fonts/Thin_8x4x4.ttf') format('truetype'),
           url('./fonts/Thin_8x4x4.otf') format('opentype');
       }
+      @font-face {
+        font-family: 'U4K_8x4x4';
+        src:
+          url('./fonts/U4K_8x4x4.woff') format('woff'),
+          url('./fonts/U4K_8x4x4.woff2') format('woff2'),
+          url('./fonts/U4K_8x4x4.ttf') format('truetype'),
+          url('./fonts/U4K_8x4x4.otf') format('opentype');
+      }
       * {
         color: #0f0;
         background: #000;
@@ -123,8 +131,8 @@
     </header>
     <article>
       <section>
-        <form>
-          <select id="fontSelect">
+        <form method="get">
+	  <select id="fontSelect" name="font">
             <option value="">글꼴</option>
             <option>Hanme_8x4x4</option>
             <option>Hanme_8x4x4_sans</option>
@@ -137,13 +145,17 @@
             <option>Sam_8x4x4</option>
             <option>Pilgi_8x4x4</option>
             <option>Thin_8x4x4</option>
+            <option>U4K_8x4x4</option>
           </select>
-          <select id="sizeSelect">
+          <select id="sizeSelect" name="size">
             <option value="">크기</option>
+            <option>12px</option>
             <option>16px</option>
+            <option>24px</option>
             <option>32px</option>
             <option>48px</option>
             <option>64px</option>
+            <option>96px</option>
           </select>
         </form>
         <p id="previewText">
@@ -163,6 +175,22 @@
           동녘 구름 틈새로 퍼지는 햇빛<br />
           해질녘 파도 속의 첨탑<br />
           체르노빌 같던 후쿠시마 원전 폭발<br />
+          가나다라마바사아자차카타파하<br />
+          개내대래매배배애재채캐태패해<br />
+          거너더러머버서어저처커터퍼허<br />
+          게네데레메베세에제체케테페헤<br />
+          고노도로모보소오조초코토포호<br />
+          교뇨됴료묘뵤쇼요죠쵸쿄툐표효<br />
+          구누두루무부수우주추쿠투푸후<br />
+          규뉴듀류뮤뷰슈유쥬츄큐튜퓨휴<br />
+          과놔돠롸뫄봐솨와좌촤콰톼퐈화<br />
+          궈눠둬뤄뭐붜숴워줘춰쿼퉈풔훠<br />
+          각난닫랄맘밥삿앙잦찿캌탙팦핳<br />
+          곡논돋롤몸봅솟옹좆찿콬톹퐆홓<br />
+          국눈둗룰뭄붑숫웅줒춪쿸퉅풒훟<br />
+          곽놘돧뢀뫔봡솻왕좢촺쾈퇕퐢홯<br />
+          괛놵됂뢝뫪봷쇑왪좷쵒쾎퇬뾆뢣<br />
+          궧뉁뒎뤩뭶뷃쉝웶쥃췞퀚퉸쀒뤯<br />
           il1I0OoQaCGcdbgqpyj<br />
           The quick brown fox jumps over a lazy dog.<br />
           Pack my box with five dozen liquor jugs.<br />
@@ -175,6 +203,8 @@
           Grumpy wizards make toxic brew for the evil Queen and Jack.<br />
           Sphinx of black quartz, judge my vow.<br />
           Travelling Beneath the azure sky in our jolly ox-cart, we often hit bumps quite hard.<br />
+          1234567890-=[],.;'\ ABCDEFGHIJKLMNOPQRSTUVWXYZ<br />
+          !@#$%^&amp;*()_+{}&lt;&gt;"?| abcdefghijklmnopqrstuvwxyz<br />
         </p>
       </section>
     </article>
@@ -186,19 +216,23 @@
         const fontSelect = document.querySelector('#fontSelect');
         const sizeSelect = document.querySelector('#sizeSelect');
         const previewText = document.querySelector('#previewText');
-        fontSelect.addEventListener('change', () => {
-          previewText.style.fontFamily = fontSelect.value;
-        });
-        sizeSelect.addEventListener('change', () => {
+
+        function updatePreview() {
+          previewText.style.fontFamily = `"${fontSelect.value}"`;
           previewText.style.fontSize = sizeSelect.value;
-        });
+        }
+
+	fontSelect.addEventListener('change', e=>e.target.form.submit());
+	sizeSelect.addEventListener('change', e=>e.target.form.submit());
+
         const params = new URLSearchParams(location.search);
         if (params.has('font')) {
-          previewText.style.fontFamily = fontSelect.value = params.get('font');
+          fontSelect.value = params.get('font');
         }
         if (params.has('size')) {
-          previewText.style.fontSize = sizeSelect.value = params.get('size');
+          sizeSelect.value = params.get('size');
         }
+        updatePreview();
       });
     </script>
   </body>

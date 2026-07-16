@@ -27,6 +27,7 @@ function buildFont {
 #buildFont "asc_sans.fnt" "han_iyagi.fnt" "Iyagi_8x4x4_sans"
 #buildFont "asc_sans.fnt" "han_sans.fnt" "Sans_8x4x4"
 #buildFont "asc_serif.fnt" "han_serif.fnt" "Serif_8x4x4"
-buildFont "asc_serif.fnt" "han_pilgi.fnt" "Pilgi_8x4x4"
+#buildFont "asc_serif.fnt" "han_pilgi.fnt" "Pilgi_8x4x4"
 #buildFont "asc_sans.fnt" "han_sam.fnt" "Sam_8x4x4"
 #buildFont "asc_thin.fnt" "han_thin.fnt" "Thin_8x4x4"
+buildFont "asc_u4k.fnt" "han_u4k.fnt" "U4K_8x4x4"
